@@ -81,25 +81,23 @@ body {
 
     .popup {
   position: absolute;
-  max-width: 90vw;
-  max-height: 80vh;
-  min-width: 300px;
-  min-height: 200px;
+  width: 40vh; /* 固定宽度为视口高度的 40% */
+  height: auto; /* 高度自动，根据内容增长 */
   background-image: url('background.png'); /* 替换为你的背景图片 */
-   background-size: cover;
-background-position: center;  
-border: 2px solid #333;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #333;
   border-radius: 10px;
   padding: 10px;
   display: none;
   z-index: 10;
-  overflow: auto; /*  允许滚动 */
-  resize: both;   /* 可拖动改变大小 */
+  overflow: auto; /* 超出内容仍可滚动（建议保留） */
   box-sizing: border-box;
+  resize: none; /* 禁止用户拖动弹窗改变大小 */
 }
 
-    .popup[contenteditable] {
-      outline: none;
-      color: white;
-      font-size: 16px;
-    }
+.popup[contenteditable] {
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
