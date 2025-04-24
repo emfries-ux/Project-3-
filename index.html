@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="stylesheet/style.css">
-	</head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Floating Icons</title>
+  <link href="style.css" rel="stylesheet">
+</head>
 
-	<body>
-		<h1>Webzine!</h1>
-		<h2>Test! Hello World</h2>
-		<!-- put in your webzine content here -->
-	</body>
+
+<body>
+
+  <div id="preloader">
+      <div id="status">
+        <img alt="logo" src="logo-big.png">
+      </div>
+    </div>
+
+  
+<img src="1.png" class="icon" id="icon1" data-popup="popup1">
+<img src="2.png" class="icon" id="icon2" data-popup="popup2">
+<img src="3.png" class="icon" id="icon3" data-popup="popup3">
+
+<div class="popup" id="popup1" contenteditable="true">
+  这是 popup1，点击图标1打开。
+</div>
+<div class="popup" id="popup2" contenteditable="true">
+  这是 popup2，点击图标2打开。
+</div>
+<div class="popup" id="popup3" contenteditable="true">
+  这是 popup3，点击图标3打开。
+</div>
+
+
+  <div id="home"></div>
+
+
+  <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+  
+  <script src="script.js" type="text/javascript"></script>
+
+
+  <script>
+  const icons = document.querySelectorAll('.icon');
+  const popups = document.querySelectorAll('.popup');
+
+  icons.forEach(icon => {
+    icon.addEventListener('click', (e) => {
+      // 关闭所有 popup
+      popups.forEach(p => p.style.display = 'none');
+
+      const popupId = icon.getAttribute('data-popup');
+      const popup = document.getElementById(popupId);
+      const rect = icon.getBoundingClientRect();
+
+      // 设置弹窗位置
+      popup.style.top = `${rect.top + window.scrollY + 70}px`;
+      popup.style.left = `${rect.left + window.scrollX}px`;
+
+      popup.style.display = 'block';
+    });
+  });
+
+  // 允许点击弹窗关闭
+  popups.forEach(popup => {
+    popup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  });
+</script>
+
+
+</body>
 </html>
