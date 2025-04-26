@@ -41,7 +41,7 @@ body {
 
 /*---------Background---------------*/
 #home {
-  background: url('hero1.jpeg') no-repeat center center;
+  background: url('images/hero1.jpeg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -78,16 +78,16 @@ body {
     #icon1 { top: 100px; left: 100px; }
     #icon2 { top: 200px; left: 300px; }
     #icon3 { top: 300px; left: 500px; }
-    #icon4 { top: 400px; left: 700px; }
-    #icon5 { top: 500px; left: 600px; }
+    #icon4 { top: 350px; left: 700px; }
+    #icon5 { top: 400px; left: 600px; }
 
 /*---------pop up window---------------*/
 
     .popup {
   position: absolute;
   width: 40vh; /* 固定宽度为视口高度的 40% */
-  height: auto; /* 高度自动，根据内容增长 */
-  background-image: url('background.png'); /* 替换为你的背景图片 */
+  max-height: 45vh;
+  background-image: url('images/background.png'); /* 替换为你的背景图片 */
   background-size: cover;
   background-position: center;
   border: 2px solid #333;
