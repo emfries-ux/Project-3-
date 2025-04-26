@@ -23,8 +23,19 @@ icons.forEach(icon => {
       const popupId = icon.getAttribute('data-popup');
       const popup = document.getElementById(popupId);
       const rect = icon.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-      popup.style.top = `${rect.top + window.scrollY + 70}px`;
+      // 判断 icon 是否在屏幕下半部分
+      const isBottomHalf = rect.top > windowHeight / 2;
+
+      if (isBottomHalf) {
+        // 弹窗在 icon 上方
+        popup.style.top = `${rect.top + window.scrollY - popup.offsetHeight - 200}px`;
+      } else {
+        // 弹窗在 icon 下方
+        popup.style.top = `${rect.top + window.scrollY + 70}px`;
+      }
+
       popup.style.left = `${rect.left + window.scrollX}px`;
       popup.style.display = 'block';
     }
@@ -61,3 +72,4 @@ document.querySelectorAll('.open-popup').forEach(btn => {
     }
   });
 });
+
