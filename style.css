@@ -76,19 +76,12 @@ body {
 
     /* icon position */
     #icon1 { top: 100px; left: 100px; }
-<<<<<<< HEAD
     #icon2 { top: 200px; left: 100px; }
     #icon3 { top: 300px; left: 100px; }
     #icon4 { top: 400px; left: 100px; }
     #icon5 { top: 500px; left: 100px; }
     #icon11{ top: 520px; left: 100px; }
-=======
-    #icon2 { top: 200px; left: 300px; }
-    #icon3 { top: 300px; left: 500px; }
-    #icon4 { top: 550px; left: 700px; }
-    #icon5 { top: 400px; left: 600px; }
->>>>>>> e8cb6d675f768deb5886d99fc88cfc57e3809c81
-
+   
 /*---------pop up window---------------*/
 
     .popup {
