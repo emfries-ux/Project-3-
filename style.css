@@ -8,6 +8,30 @@ body {
       position: relative;
     }
 
+/*-----------Bottom icon---------------*/
+    .bottom-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffc0cb;
+  color: #333;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.bottom-button:hover {
+  background-color: #ff69b4; 
+  color: #fff;
+}
+
+
+
 
 /*--------Preload---------------*/
 
@@ -75,16 +99,18 @@ body {
     }
 
     /* icon position */
-    #icon1 { top: 50px; left:  50px; }
-    #icon2 { top: 150px; left: 50px; }
-    #icon3 { top: 250px; left: 50px; }
-    #icon4 { top: 350px; left: 50px; }
-    #icon11{ top: 450px; left: 50px; }
-    #icon14{ top: 550px; left: 50px; }
-    #icon7{ top:  50px; left: 150px; }
-    #icon16{ top: 150px; left: 150px; }
-   
-   
+    #icon1  { top: 80px;  left: 10vw; }
+#icon2  { top: 180px; left: 40vw; }
+#icon3  { top: 250px; left: 70vw; }
+#icon4  { top: 520px; left: 75vw; }
+#icon5  { top: 360px; left: 55vw; }
+
+#icon11 { top: 400px; left: 5vw; }
+#icon14 { top: 520px; left: 15vw; }
+#icon7  { top: 20px;  left: 20vw; }
+#icon16 { top: 320px; left: 30vw; }
+
+
 /*---------pop up window---------------*/
 
     .popup {
@@ -97,11 +123,16 @@ body {
   border: 2px solid #333;
   border-radius: 10px;
   padding: 10px;
+  padding-top: 30px;
   display: none;
   z-index: 10;
   overflow: auto; /* 超出内容仍可滚动（建议保留） */
   box-sizing: border-box;
   resize: none; /* 禁止用户拖动弹窗改变大小 */
+}
+
+.popup-content {
+  padding-top: 30px;
 }
 
 .popup-top {

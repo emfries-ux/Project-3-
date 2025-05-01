@@ -30,7 +30,7 @@ icons.forEach(icon => {
 
       if (isBottomHalf) {
         // 弹窗在 icon 上方
-        popup.style.top = `${rect.top + window.scrollY - popup.offsetHeight - 200}px`;
+        popup.style.top = `${rect.top + window.scrollY - popup.offsetHeight - 300}px`;
       } else {
         // 弹窗在 icon 下方
         popup.style.top = `${rect.top + window.scrollY + 70}px`;
